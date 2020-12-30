@@ -1,7 +1,8 @@
 import React from "react";
-import {IAlert, IAppState} from "../Models";
 import {connect} from "react-redux";
-import {hideAlert, showAlert} from "../Actions/Actions";
+import {IAlert, IAppState} from "../Models";
+import {hideAlert} from "../Actions/Actions";
+import {EAlertStatus} from "../Enums";
 
 interface IStateProps {
     alert?: IAlert;
@@ -9,25 +10,21 @@ interface IStateProps {
 }
 
 interface IDispatchProps {
-    showAlert: (alert: IAlert) => void;
     hideAlert: () => void;
 }
 
 type TProps = IStateProps & IDispatchProps;
 
-const Alert: React.FC<TProps> = ({alert, visible, hideAlert}) => {
-    if (!visible) return null;
-
-    return (
+const Alert: React.FC<TProps> = ({alert, visible, hideAlert}) => (
+    visible ? (
         <div className={`alert alert-${alert?.type || 'warning'} alert-dismissible`}>
-            <strong>Attention!</strong>
-            {alert?.text}
+            <span className="pre"><strong>{alert?.type === EAlertStatus.SUCCESS ? 'Success!' : 'Attention!'} &nbsp;</strong>{alert?.text}</span>
             <button onClick={hideAlert} type="button" className="close" data-dismiss="alert" aria-label="Close">
                 <span aria-hidden="true">&times;</span>
             </button>
         </div>
-    )
-}
+    ) : null
+)
 
 const mapStateToProps = (state: IAppState): IStateProps => ({
     alert: state.AlertState.alert,
@@ -35,7 +32,6 @@ const mapStateToProps = (state: IAppState): IStateProps => ({
 })
 
 const mapDispatchToProps: IDispatchProps = {
-    showAlert,
     hideAlert
 }
 

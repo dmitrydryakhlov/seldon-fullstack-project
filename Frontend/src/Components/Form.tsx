@@ -1,10 +1,9 @@
 import React, {useState} from "react";
 import {connect} from "react-redux";
 import {IAlert, IAppState, IRequest} from "../Models";
-import {hideAlert, sendData, showAlert} from "../Actions/Actions";
+import {hideAlert, sendData} from "../Actions/Actions";
 
 interface IDispatchProps {
-    showAlert: (alert: IAlert) => void;
     hideAlert: () => void;
     sendData: (data: IRequest) => Function;
 }
@@ -21,11 +20,11 @@ const Form: React.FC<TProps> = ({sending, sendData}) => {
     const [inputText, setInputText] = useState('');
     const [inputNumber, setInputNumber] = useState('');
 
-    const handleSubmit = (event: React.SyntheticEvent) => {
+    const handleSubmit = (event: React.SyntheticEvent): void => {
         event.preventDefault();
     }
 
-    const handleConfirm = () => {
+    const handleConfirm = (): void => {
         sendData({word: inputText, number: inputNumber})
         handleReset();
     }
@@ -56,23 +55,33 @@ const Form: React.FC<TProps> = ({sending, sendData}) => {
                     onChange={(e) => setInputNumber(e.target.value)}
                     disabled={sending}
                 />
-                <button onClick={handleConfirm} className="btn btn-primary" disabled={sending}>Confirm</button>
+                <button onClick={handleConfirm} className="btn btn-primary"
+                        disabled={sending || (!inputText.length && !inputNumber.length)}>Confirm
+                </button>
                 <button onClick={handleReset} className="btn btn-warning" disabled={sending}>Reset</button>
             </div>
         </form>
     )
 }
 
-const mapStateToProps = ({LoadingState: {sending}, AlertState: {alert, visible}}: IAppState): IStateProps => ({
-    alert,
-    visible,
+const mapStateToProps = ({LoadingState:
+{
     sending
-})
+}, AlertState:
+{
+    alert, visible
+}}: IAppState): IStateProps => (
+{
+    alert,
+        visible,
+        sending
+}
+)
 
-const mapDispatchToProps: IDispatchProps = {
+const mapDispatchToProps: IDispatchProps =
+{
     hideAlert,
-    showAlert,
-    sendData
+        sendData
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(Form);

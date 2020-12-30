@@ -39,8 +39,8 @@ export interface IAppState {
 }
 
 export interface IRequest {
-    word: string;
-    number: string;
+    word: string | number;
+    number: string | number;
 }
 
 export interface IResponse {
