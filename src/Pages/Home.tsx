@@ -1,27 +1,25 @@
-import React from "react";
+import React, {useEffect} from "react";
 import Form from "../Components/Form";
 import {IAppState} from "../Models";
 import {Loader} from "../Components/Loader";
-import {connect} from "react-redux";
-import HistoryConnect from "../Components/HistoryConnect";
+import {useDispatch, useSelector} from "react-redux";
+import {History} from "../Components/History";
+import {loadHistory} from "../Actions/Actions";
 
-interface IStateProps {
-    loading: boolean;
+export const Home: React.FC = (): JSX.Element => {
+    const dispatch = useDispatch();
+    const loading: boolean = useSelector((state: IAppState) => state.LoadingState.loading);
+
+    useEffect(() => {
+        dispatch(loadHistory())
+        // eslint-disable-next-line
+    }, [])
+
+    return (
+        <>
+            <Form/>
+            <hr/>
+            {loading ? <Loader/> : <History/>}
+        </>
+    )
 }
-
-const Home: React.FC<IStateProps> = ({loading}): JSX.Element => (
-    <>
-        <Form/>
-        <hr/>
-        {loading ? <Loader/> : <HistoryConnect/>}
-    </>
-)
-
-
-const mapStateToProps = (state: IAppState): IStateProps => ({
-    loading: state.LoadingState.loading
-})
-
-export default connect(mapStateToProps, null)(Home);
-
-

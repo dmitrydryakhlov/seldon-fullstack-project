@@ -1,5 +1,5 @@
 import {HIDE_ALERT, SHOW_ALERT} from "../Actions/ActionTypes";
-import {IAlert, IAlertState, IFSAAction} from "../Models";
+import {IAlert, IAlertState, IFSAAction, THandler} from "../Models";
 import {EAlertStatus} from "../Enums";
 
 const initialState: IAlertState = {
@@ -10,14 +10,10 @@ const initialState: IAlertState = {
     visible: false
 }
 
-type THandler = {
-    [key: string]: (state: IAlertState, action: IFSAAction<IAlert>) => IAlertState
-}
-
-const handlers: THandler = {
-    [SHOW_ALERT]: (state: IAlertState, action: IFSAAction<IAlert>): IAlertState => ({
+const handlers: THandler<IAlertState, IAlert> = {
+    [SHOW_ALERT]: (state: IAlertState, action?: IFSAAction<IAlert>): IAlertState => ({
         ...state,
-        alert: action.payload,
+        alert: action?.payload,
         visible: true
     }),
     [HIDE_ALERT]: (state: IAlertState): IAlertState => ({

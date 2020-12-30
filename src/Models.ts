@@ -1,8 +1,7 @@
 import {EAlertStatus} from "./Enums";
 
-export interface INote {
-    id: number;
-    title: string;
+export type THandler<IState, IAction = any> = {
+    [key: string]: (state: IState, action?: IFSAAction<IAction>) => IState
 }
 
 export interface IAlert {
@@ -17,14 +16,19 @@ export interface IAlertState {
 
 export interface ILoadingState {
     loading: boolean;
+    sending: boolean;
 }
 
 export interface IHistoryState {
     history: IHistory[];
+    currentResponse: IResponse;
 }
 
-export interface IFSAAction<P> {
+export interface IAction {
     type: string;
+}
+
+export interface IFSAAction<P> extends IAction {
     payload?: P;
 }
 
@@ -36,7 +40,7 @@ export interface IAppState {
 
 export interface IRequest {
     word: string;
-    number: number;
+    number: string;
 }
 
 export interface IResponse {

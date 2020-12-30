@@ -1,16 +1,42 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="2df61641-8734-43b4-a4cd-7ff6b0fce021" name="Default Changelist" comment="" />
+    <list default="true" id="2df61641-8734-43b4-a4cd-7ff6b0fce021" name="Default Changelist" comment="initial commit">
+      <changelist_data name="dmitrydryakhlov" email="dmitrydryakhlov.mail@gmail.com" />
+      <change beforePath="$PROJECT_DIR$/.eslintcache" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintcache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Actions/ActionTypes.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/Actions/ActionTypes.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Actions/Actions.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/Actions/Actions.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/App.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/Form.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Form.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/History.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/History.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/HistoryConnect.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/Navbar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Navbar.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Models.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/Models.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Pages/About.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/About.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Pages/Home.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/Home.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Reducers/AlertReducer.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/Reducers/AlertReducer.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Reducers/HistoryReducer.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/Reducers/HistoryReducer.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Reducers/LoadingReducer.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/Reducers/LoadingReducer.ts" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="Git.Settings">
+    <option name="PREVIOUS_COMMIT_AUTHORS">
+      <list>
+        <option value="dmitrydryakhlov &lt;dmitrydryakhlov.mail@gmail.com&gt;" />
+      </list>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="PackageJsonUpdateNotifier">
     <dismissed value="$PROJECT_DIR$/package.json" />
   </component>
   <component name="ProjectId" id="1mKBoh3dYXNb9sSyB3NLfnZPwzf" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -44,12 +70,45 @@
       <updated>1609232579569</updated>
       <workItem from="1609232581703" duration="19969000" />
       <workItem from="1609257726300" duration="607000" />
-      <workItem from="1609259563495" duration="20871000" />
+      <workItem from="1609259563495" duration="31960000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="CUSTOM_BOOLEAN_PROPERTIES">
+                <map>
+                  <entry key="Show.Git.Branches" value="true" />
+                </map>
+              </option>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="HEAD" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Frontend is done" />
+    <MESSAGE value="initial commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="initial commit" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

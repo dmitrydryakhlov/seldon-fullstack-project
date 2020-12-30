@@ -1,10 +1,10 @@
 import React from "react";
 import {NavLink} from 'react-router-dom'
 
-export const Navbar = () => (
+export const Navbar = (): JSX.Element => (
     <nav className="navbar navbar-dark navbar-expand-lg bg-primary">
         <div className="navbar-brand">
-            Note app
+            Seldon test project
         </div>
 
         <ul className="navbar-nav">
@@ -12,7 +12,7 @@ export const Navbar = () => (
                 <NavLink className="nav-link" to="/" exact>Home</NavLink>
             </li>
             <li>
-                <NavLink className="nav-link" to="/about">Information</NavLink>
+                <NavLink className="nav-link" to="/about">Documentation</NavLink>
             </li>
         </ul>
     </nav>

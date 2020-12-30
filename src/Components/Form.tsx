@@ -1,21 +1,23 @@
 import React, {useState} from "react";
 import {connect} from "react-redux";
-import {IAlert, IAlertState} from "../Models";
-import {hideAlert, showAlert} from "../Actions/Actions";
+import {IAlert, IAppState, IRequest} from "../Models";
+import {hideAlert, sendData, showAlert} from "../Actions/Actions";
 
 interface IDispatchProps {
     showAlert: (alert: IAlert) => void;
     hideAlert: () => void;
+    sendData: (data: IRequest) => Function;
 }
 
 interface IStateProps {
     alert?: IAlert;
     visible: boolean;
+    sending: boolean;
 }
 
 type TProps = IDispatchProps & IStateProps;
 
-const Form: React.FC<TProps> = ({hideAlert, showAlert, alert}) => {
+const Form: React.FC<TProps> = ({sending, sendData}) => {
     const [inputText, setInputText] = useState('');
     const [inputNumber, setInputNumber] = useState('');
 
@@ -24,7 +26,8 @@ const Form: React.FC<TProps> = ({hideAlert, showAlert, alert}) => {
     }
 
     const handleConfirm = () => {
-        console.log(JSON.stringify({word: inputText, number: inputNumber}))
+        sendData({word: inputText, number: inputNumber})
+        handleReset();
     }
 
     const handleReset = () => {
@@ -42,6 +45,7 @@ const Form: React.FC<TProps> = ({hideAlert, showAlert, alert}) => {
                     value={inputText}
                     name="text"
                     onChange={(e) => setInputText(e.target.value)}
+                    disabled={sending}
                 />
                 <input
                     type="text"
@@ -50,22 +54,25 @@ const Form: React.FC<TProps> = ({hideAlert, showAlert, alert}) => {
                     value={inputNumber}
                     name="text"
                     onChange={(e) => setInputNumber(e.target.value)}
+                    disabled={sending}
                 />
-                <button onClick={handleConfirm} className="btn btn-primary">Confirm</button>
-                <button onClick={handleReset} className="btn btn-warning">Reset</button>
+                <button onClick={handleConfirm} className="btn btn-primary" disabled={sending}>Confirm</button>
+                <button onClick={handleReset} className="btn btn-warning" disabled={sending}>Reset</button>
             </div>
         </form>
     )
 }
 
-const mapStateToProps = ({alert, visible}: IAlertState): IStateProps => ({
+const mapStateToProps = ({LoadingState: {sending}, AlertState: {alert, visible}}: IAppState): IStateProps => ({
     alert,
-    visible
+    visible,
+    sending
 })
 
 const mapDispatchToProps: IDispatchProps = {
     hideAlert,
-    showAlert
+    showAlert,
+    sendData
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(Form);

@@ -1,25 +1,15 @@
-import React, {useEffect} from "react";
+import React from "react";
 import {IAppState, IHistory} from "../Models";
-import {useSelector, useDispatch} from "react-redux";
-import {loadHistory} from "../Actions/Actions";
+import {useSelector} from "react-redux";
 
 export const History: React.FC = (): JSX.Element => {
-    // const dispatch = useDispatch()
     const history: IHistory[] = useSelector((state: IAppState) => state.HistoryState.history)
-
-    const dispatch = useDispatch();
-
-    useEffect(() => {
-        dispatch(loadHistory({number: 100, word: 'mama'}))
-        // eslint-disable-next-line
-    }, [])
-
 
     return (
         <table className="table">
             <thead>
             <tr>
-                {['response_time', 'request', 'response', 'action'].map((header, index) => (
+                {['response_time', 'request', 'response', 'action'].map((header) => (
                     <th scope="col" key={header}>{header}</th>
                 ))}
             </tr>
