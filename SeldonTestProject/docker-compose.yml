@@ -1,0 +1,20 @@
+version: "3"
+services:
+  frontend:
+    stdin_open: true
+    build: ./Frontend
+    ports:
+      - "3000:3000"
+    container_name: seldon-frontend
+    networks:
+      - webappnetwork
+  backend:
+    build: ./Backend
+    ports:
+      - "3001:3001"
+    container_name: seldon-backend
+    networks:
+      - webappnetwork
+networks:
+  webappnetwork:
+    driver: bridge

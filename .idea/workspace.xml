@@ -2,19 +2,53 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2df61641-8734-43b4-a4cd-7ff6b0fce021" name="Default Changelist" comment="backend done">
-      <changelist_data name="dmitrydryakhlov" email="dmitrydryakhlov.mail@gmail.com" />
+      <change afterPath="$PROJECT_DIR$/SeldonTestProject/Backend/.dockerignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SeldonTestProject/Backend/Dockerfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SeldonTestProject/Backend/dist/utils.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SeldonTestProject/Backend/dist/utils.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SeldonTestProject/Frontend/Dockerfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SeldonTestProject/docker-compose.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Backend/src/app.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/src/app.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/.eslintcache" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/.eslintcache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/src/Components/Alert.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/src/Components/Alert.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/src/Components/Form.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/src/Components/Form.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/src/Components/History.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/src/Components/History.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/src/Pages/About.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/src/Pages/About.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/src/Pages/Home.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/src/Pages/Home.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/src/Styles/index.scss" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/src/Styles/index.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/tsconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/tsconfig.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/yarn.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/nodemon.json" beforeDir="false" afterPath="$PROJECT_DIR$/SeldonTestProject/Backend/nodemon.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/SeldonTestProject/Backend/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/src/Models.ts" beforeDir="false" afterPath="$PROJECT_DIR$/SeldonTestProject/Backend/src/Models.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/src/app.ts" beforeDir="false" afterPath="$PROJECT_DIR$/SeldonTestProject/Backend/src/app.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/src/routes.ts" beforeDir="false" afterPath="$PROJECT_DIR$/SeldonTestProject/Backend/src/routes.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/src/utils.ts" beforeDir="false" afterPath="$PROJECT_DIR$/SeldonTestProject/Backend/src/utils.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/tsconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/SeldonTestProject/Backend/tsconfig.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/tslint.json" beforeDir="false" afterPath="$PROJECT_DIR$/SeldonTestProject/Backend/tslint.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/.eslintcache" beforeDir="false" afterPath="$PROJECT_DIR$/SeldonTestProject/Frontend/.eslintcache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/SeldonTestProject/Frontend/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/SeldonTestProject/Frontend/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/SeldonTestProject/Frontend/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/public/favicon.ico" beforeDir="false" afterPath="$PROJECT_DIR$/SeldonTestProject/Frontend/public/favicon.ico" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/SeldonTestProject/Frontend/public/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/public/logo192.png" beforeDir="false" afterPath="$PROJECT_DIR$/SeldonTestProject/Frontend/public/logo192.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/public/logo512.png" beforeDir="false" afterPath="$PROJECT_DIR$/SeldonTestProject/Frontend/public/logo512.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/public/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/SeldonTestProject/Frontend/public/manifest.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/public/robots.txt" beforeDir="false" afterPath="$PROJECT_DIR$/SeldonTestProject/Frontend/public/robots.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/src/Actions/ActionTypes.ts" beforeDir="false" afterPath="$PROJECT_DIR$/SeldonTestProject/Frontend/src/Actions/ActionTypes.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/src/Actions/Actions.ts" beforeDir="false" afterPath="$PROJECT_DIR$/SeldonTestProject/Frontend/src/Actions/Actions.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/src/Components/Alert.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/SeldonTestProject/Frontend/src/Components/Alert.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/src/Components/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/SeldonTestProject/Frontend/src/Components/App.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/src/Components/Form.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/SeldonTestProject/Frontend/src/Components/Form.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/src/Components/History.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/SeldonTestProject/Frontend/src/Components/History.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/src/Components/Loader.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/SeldonTestProject/Frontend/src/Components/Loader.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/src/Components/Navbar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/SeldonTestProject/Frontend/src/Components/Navbar.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/src/Enums.ts" beforeDir="false" afterPath="$PROJECT_DIR$/SeldonTestProject/Frontend/src/Enums.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/src/Models.ts" beforeDir="false" afterPath="$PROJECT_DIR$/SeldonTestProject/Frontend/src/Models.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/src/Pages/About.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/SeldonTestProject/Frontend/src/Pages/About.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/src/Pages/Home.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/SeldonTestProject/Frontend/src/Pages/Home.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/src/Reducers/AlertReducer.ts" beforeDir="false" afterPath="$PROJECT_DIR$/SeldonTestProject/Frontend/src/Reducers/AlertReducer.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/src/Reducers/HistoryReducer.ts" beforeDir="false" afterPath="$PROJECT_DIR$/SeldonTestProject/Frontend/src/Reducers/HistoryReducer.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/src/Reducers/LoadingReducer.ts" beforeDir="false" afterPath="$PROJECT_DIR$/SeldonTestProject/Frontend/src/Reducers/LoadingReducer.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/src/Reducers/RootReducer.ts" beforeDir="false" afterPath="$PROJECT_DIR$/SeldonTestProject/Frontend/src/Reducers/RootReducer.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/src/Styles/index.scss" beforeDir="false" afterPath="$PROJECT_DIR$/SeldonTestProject/Frontend/src/Styles/index.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/src/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/SeldonTestProject/Frontend/src/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/src/react-app-env.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/SeldonTestProject/Frontend/src/react-app-env.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/src/setupTests.ts" beforeDir="false" afterPath="$PROJECT_DIR$/SeldonTestProject/Frontend/src/setupTests.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/tsconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/SeldonTestProject/Frontend/tsconfig.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/SeldonTestProject/Frontend/yarn.lock" afterDir="false" />
     </list>
     <list id="f8e4725a-c82f-4243-84e2-4974fa97dca2" name="backend done" comment="" />
     <option name="SHOW_DIALOG" value="false" />
@@ -39,7 +73,7 @@
     </option>
   </component>
   <component name="PackageJsonUpdateNotifier">
-    <dismissed value="$PROJECT_DIR$/Frontend/package.json" />
+    <dismissed value="$PROJECT_DIR$/SeldonTestProject/Frontend/package.json" />
   </component>
   <component name="ProjectId" id="1mKBoh3dYXNb9sSyB3NLfnZPwzf" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
@@ -50,11 +84,12 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="TODO_SCOPE" value="All Places" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/SeldonTestProject/Frontend" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
@@ -64,12 +99,15 @@
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/SeldonTestProject/Frontend" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/SeldonTestProject" />
       <recent name="$PROJECT_DIR$/Backend" />
       <recent name="$PROJECT_DIR$/Frontend" />
       <recent name="$PROJECT_DIR$/Frontend/" />
       <recent name="$PROJECT_DIR$" />
-      <recent name="$PROJECT_DIR$/src/Components" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -84,7 +122,7 @@
       <workItem from="1609232581703" duration="19969000" />
       <workItem from="1609257726300" duration="607000" />
       <workItem from="1609259563495" duration="73860000" />
-      <workItem from="1609489839728" duration="1988000" />
+      <workItem from="1609489839728" duration="17291000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <created>1609326224872</created>
@@ -121,7 +159,14 @@
       <option name="project" value="LOCAL" />
       <updated>1609360543494</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="animations added">
+      <created>1609491972603</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1609491972603</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -157,11 +202,13 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="Frontend is done" />
     <MESSAGE value="initial commit" />
     <MESSAGE value="delete HistoryConnect.tsx" />
     <MESSAGE value="backend done" />
-    <option name="LAST_COMMIT_MESSAGE" value="backend done" />
+    <MESSAGE value="animations added" />
+    <option name="LAST_COMMIT_MESSAGE" value="animations added" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
