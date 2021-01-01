@@ -1,23 +1,17 @@
 import React from "react";
-import {useDispatch, useSelector} from "react-redux";
-import {IAppState, IHistory} from "../Models";
-import {deleteItem} from "../Actions/Actions";
+import {IHistory} from "../Models";
+
+interface IOwnProps {
+    deleteItem: Function,
+    history: IHistory[]
+}
 
 /**
  * Show the requests' history.
+ * @param deleteItem
+ * @param history
  */
-export const History: React.FC = (): JSX.Element => {
-    const history: IHistory[] = useSelector((state: IAppState) => state.HistoryState.history)
-    const dispatch = useDispatch();
-
-    /**
-     * Delete element from the history.
-     * @param id elem.id to be deleted.
-     */
-    const handleClick = (id: string) => (): void => {
-        dispatch(deleteItem(id));
-    }
-
+export const History: React.FC<IOwnProps> = ({deleteItem, history}): JSX.Element => {
     return (
         <table className="table">
             <thead>
@@ -31,14 +25,14 @@ export const History: React.FC = (): JSX.Element => {
             {/*new first*/}
             {history.slice().reverse().map(historyElem => (
                     <tr key={historyElem.requestId}>
-                        <th scope="row">{historyElem.responseTime.toFixed()}</th>
-                        <th>{JSON.stringify(historyElem.request)}</th>
-                        <th>{JSON.stringify(historyElem.response)}</th>
-                        <th>{historyElem.action}</th>
-                        <th>
+                        <td>{historyElem.responseTime.toFixed()}</td>
+                        <td>{JSON.stringify(historyElem.request)}</td>
+                        <td>{JSON.stringify(historyElem.response)}</td>
+                        <td>{historyElem.action}</td>
+                        <td>
                             <button className="btn btn-sm btn-dark"
-                                    onClick={handleClick(historyElem.requestId)}>&times;</button>
-                        </th>
+                                    onClick={deleteItem(historyElem.requestId)}>&times;</button>
+                        </td>
                     </tr>
                 )
             )}

@@ -29,3 +29,42 @@ code {
     max-width: 35%;
   }
 }
+
+.alert-enter {
+  opacity: 0;
+}
+
+.alert-enter-active {
+  transition: opacity 700ms ease-in;
+  opacity: 1;
+}
+
+.alert-exit-active {
+  transition: opacity 500ms ease-in;
+  opacity: 0;
+}
+
+.history-exit-active {
+  animation: history 1700ms ease-out forwards;
+}
+
+.history-enter-active {
+  animation: history 1500ms ease-in alternate-reverse;
+}
+
+@keyframes history {
+  0% {
+    -webkit-transform: translateX(-30wh);
+    transform: translateX(0);
+  }
+
+  30% {
+    opacity: .6;
+    transform: translateX(300px);
+  }
+
+  100% {
+    opacity: 0;
+    transform: translateX(-200px);
+  }
+}

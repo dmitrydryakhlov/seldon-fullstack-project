@@ -64,24 +64,26 @@ const Form: React.FC<TProps> = ({sending, sendData}) => {
     )
 }
 
-const mapStateToProps = ({LoadingState:
-{
-    sending
-}, AlertState:
-{
-    alert, visible
-}}: IAppState): IStateProps => (
-{
-    alert,
+const mapStateToProps = ({
+                             LoadingState:
+                                 {
+                                     sending
+                                 }, AlertState:
+        {
+            alert, visible
+        }
+                         }: IAppState): IStateProps => (
+    {
+        alert,
         visible,
         sending
-}
+    }
 )
 
 const mapDispatchToProps: IDispatchProps =
-{
-    hideAlert,
+    {
+        hideAlert,
         sendData
-}
+    }
 
 export default connect(mapStateToProps, mapDispatchToProps)(Form);
