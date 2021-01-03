@@ -1,1 +1,3 @@
-## To run project: docker-compose up  
+# To run project:
+
+## sudo docker-compose build && sudo docker-compose up
