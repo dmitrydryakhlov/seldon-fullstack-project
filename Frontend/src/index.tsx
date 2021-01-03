@@ -1,24 +1,17 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import {applyMiddleware, compose} from 'redux';
-import {Provider} from "react-redux";
-import {createStore} from "redux";
-import thunk from 'redux-thunk'
+import {ApolloClient, ApolloProvider, InMemoryCache} from '@apollo/client'
 import './Styles/index.scss';
-import App from './Components/App';
-import {rootReducer} from "./Reducers/RootReducer";
+import {App} from './Components/App';
 
-const store = createStore(rootReducer, compose(
-    applyMiddleware(
-        thunk
-    )
-))
+const client = new ApolloClient({
+    uri: 'http://localhost:3001/graphql?',
+    cache: new InMemoryCache(),
+})
 
 ReactDOM.render(
-    <React.StrictMode>
-        <Provider store={store}>
-            <App/>
-        </Provider>
-    </React.StrictMode>,
+    <ApolloProvider client={client}>
+        <App/>
+    </ApolloProvider>,
     document.getElementById('root')
 );

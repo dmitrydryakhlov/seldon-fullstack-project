@@ -1,22 +1,12 @@
 import React, {useState} from "react";
-import {connect} from "react-redux";
-import {IAlert, IAppState, IRequest} from "../Models";
-import {hideAlert, sendData} from "../Actions/Actions";
 
-interface IDispatchProps {
-    hideAlert: () => void;
-    sendData: (data: IRequest) => Function;
-}
-
-interface IStateProps {
-    alert?: IAlert;
-    visible: boolean;
+interface IOwnProps {
+    handleConfirm: (word: string, number: string, handleReset: () => void) =>
+        (event: React.SyntheticEvent) => Promise<void>;
     sending: boolean;
 }
 
-type TProps = IDispatchProps & IStateProps;
-
-const Form: React.FC<TProps> = ({sending, sendData}) => {
+export const Form: React.FC<IOwnProps> = ({handleConfirm, sending}) => {
     const [inputText, setInputText] = useState('');
     const [inputNumber, setInputNumber] = useState('');
 
@@ -24,12 +14,7 @@ const Form: React.FC<TProps> = ({sending, sendData}) => {
         event.preventDefault();
     }
 
-    const handleConfirm = (): void => {
-        sendData({word: inputText, number: inputNumber})
-        handleReset();
-    }
-
-    const handleReset = () => {
+    const handleReset = (): void => {
         setInputText('')
         setInputNumber('')
     }
@@ -55,35 +40,15 @@ const Form: React.FC<TProps> = ({sending, sendData}) => {
                     onChange={(e) => setInputNumber(e.target.value)}
                     disabled={sending}
                 />
-                <button onClick={handleConfirm} className="btn btn-primary"
-                        disabled={sending || (!inputText.length && !inputNumber.length)}>Confirm
+                <button
+                    onClick={handleConfirm(inputText, inputNumber, handleReset)}
+                    className="btn btn-primary"
+                    disabled={sending || (!inputText.length && !inputNumber.length)}
+                >
+                    Confirm
                 </button>
                 <button onClick={handleReset} className="btn btn-warning" disabled={sending}>Reset</button>
             </div>
         </form>
     )
 }
-
-const mapStateToProps = ({
-                             LoadingState:
-                                 {
-                                     sending
-                                 }, AlertState:
-        {
-            alert, visible
-        }
-                         }: IAppState): IStateProps => (
-    {
-        alert,
-        visible,
-        sending
-    }
-)
-
-const mapDispatchToProps: IDispatchProps =
-    {
-        hideAlert,
-        sendData
-    }
-
-export default connect(mapStateToProps, mapDispatchToProps)(Form);

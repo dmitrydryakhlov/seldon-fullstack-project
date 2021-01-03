@@ -5,15 +5,15 @@ export interface IRequest {
 
 export interface IResponse {
     count: number;
-    square: number;
+    square: string;
 }
 
 export interface IDeleteRequest {
-    requestId: string;
+    id: string;
 }
 
 export interface IHistory {
-    responseTime?: number;
+    responseTime: number;
     request: IRequest;
     response: IResponse;
     action: string;

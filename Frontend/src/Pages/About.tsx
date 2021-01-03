@@ -1,6 +1,6 @@
 import React from "react";
 
-export const About = () => (
+export const About = (): JSX.Element => (
     <div className="jumbotron">
         <div className="container">
             <h1 className="display-4">Enter word and number</h1>

@@ -2,8 +2,10 @@ import React from "react";
 import {IHistory} from "../Models";
 
 interface IOwnProps {
-    deleteItem: Function,
-    history: IHistory[]
+    deleteItem: (id: string) => (event: React.SyntheticEvent) => void,
+    history?: {
+        getHistory: IHistory[]
+    }
 }
 
 /**
@@ -22,20 +24,21 @@ export const History: React.FC<IOwnProps> = ({deleteItem, history}): JSX.Element
             </tr>
             </thead>
             <tbody>
-            {/*new first*/}
-            {history.slice().reverse().map(historyElem => (
+            {history?.getHistory.length ? history?.getHistory.map(historyElem => (
                     <tr key={historyElem.requestId}>
-                        <td>{historyElem.responseTime.toFixed()}</td>
-                        <td>{JSON.stringify(historyElem.request)}</td>
-                        <td>{JSON.stringify(historyElem.response)}</td>
+                        <td>{parseFloat(historyElem.responseTime).toFixed()}</td>
+                        <td>{`word: ${historyElem.request.word} - number: ${historyElem.request.number}`}</td>
+                        <td>{`count: ${historyElem.response.count} - square: ${historyElem.response.square}`}</td>
                         <td>{historyElem.action}</td>
-                        <td>
+                        <td className="delete-button">
                             <button className="btn btn-sm btn-dark"
                                     onClick={deleteItem(historyElem.requestId)}>&times;</button>
                         </td>
                     </tr>
                 )
-            )}
+            ) : <tr>
+                <td colSpan={5} className="text-center">History is empty</td>
+            </tr>}
             </tbody>
         </table>
     )

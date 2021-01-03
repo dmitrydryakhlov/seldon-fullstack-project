@@ -1,0 +1,42 @@
+# This file was generated based on ".graphqlconfig". Do not edit manually.
+
+schema {
+    query: Query
+    mutation: Mutation
+}
+
+type IHistory {
+    action: String!
+    request: IRequest!
+    requestId: ID!
+    response: IResponse!
+    responseTime: String!
+}
+
+type IRequest {
+    number: String!
+    word: String!
+}
+
+type IDeleteRequest {
+    id: ID!
+}
+
+type IResponse {
+    count: Int!
+    square: String!
+}
+
+type Mutation {
+    deleteItem(id: ID!): Boolean!
+    sendData(request: IRequestInput!): IResponse!
+}
+
+type Query {
+    getHistory: [IHistory]!
+}
+
+input IRequestInput {
+    number: String!
+    word: String!
+}
