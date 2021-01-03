@@ -14,6 +14,13 @@ export interface IAlertState {
     visible: boolean;
 }
 
+export interface IAlertContext {
+    alert?: IAlert;
+    visible: boolean;
+    hideAlert: () => void;
+    showAlert: (alert: IAlert) => void;
+}
+
 export interface ILoadingState {
     loading: boolean;
     sending: boolean;
@@ -29,7 +36,7 @@ export interface IAction {
 }
 
 export interface IFSAAction<P> extends IAction {
-    payload?: P;
+    payload: P;
 }
 
 export interface IAppState {
@@ -49,7 +56,7 @@ export interface IResponse {
 }
 
 export interface IHistory {
-    responseTime: number;
+    responseTime: string;
     request: IRequest;
     response: IResponse;
     action: string;
