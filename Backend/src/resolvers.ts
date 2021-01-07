@@ -5,7 +5,7 @@ import uniqId from "uniqid";
 let history: IHistory[] = [];
 
 export const rootResolvers = {
-    getHistory: (): IHistory[] => history,
+    getHistory: (): IHistory[] => history.slice().reverse(),
     deleteItem: (params: IDeleteRequest) => {
         history = history.filter(historyElem => historyElem.requestId !== params.id);
         return true;
@@ -25,7 +25,7 @@ export const rootResolvers = {
                             count: request.word.length,
                             square: String(parseInt(request.number, 0) ** 2),
                         }
-                        history.unshift({
+                        history.push({
                             action: 'post',
                             response,
                             request,
